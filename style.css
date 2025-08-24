@@ -1,0 +1,52 @@
+/* Reset and base styles */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #333;
+}
+.navbar a { color: #fff; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin: 0 10px; }
+.nav-links .active { text-decoration: underline; }
+
+/* Hero & content sections */
+.hero, .content {
+  text-align: center;
+  padding: 3rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4f4f4;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    background: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  .nav-links.show { display: flex; }
+}
